@@ -8,7 +8,7 @@ int main()
 
 	sort.print();
 	//sort.MergeSort();
-	sort.SelectionSort();
+	sort.InsertionSort();
 	//quickSort(arr, 0, 9);
 
 	sort.print();

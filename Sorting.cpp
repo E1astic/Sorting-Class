@@ -30,6 +30,55 @@ void Sorting::fillArray()
 	}
 }
 
+//					осгшпэйнбюъ янпрхпнбйю 
+void  Sorting::bubbleSort()
+{
+	for (int i = 1; i < size; ++i)
+	{
+		for (int j = 0; j < size - i; ++j)
+		{
+			if (arr[j + 1] < arr[j])
+				swap(arr[j], arr[j + 1]);
+		}
+	}
+}
+
+//					янпрхпнбйю бшанпнл
+void  Sorting::SelectionSort()
+{
+	for (int i = 0; i < size - 1; ++i)
+	{
+		int imin = i;
+		for (int j = i + 1; j < size; ++j)
+		{
+			if (arr[j] < arr[imin])
+				imin = j;
+		}
+		swap(arr[i], arr[imin]);
+	}
+}
+
+//					янпрхпнбйю бярюбйюлх
+void Sorting::InsertionSort()
+{
+	for (int cur = 1; cur < size; ++cur)
+	{
+		int i = cur;
+		for (int prev = cur - 1; prev >= 0; --prev)
+		{
+			if (arr[i] < arr[prev])
+			{
+				swap(arr[i], arr[prev]);
+				--i;
+			}
+			else
+				break;
+		}
+	}
+}
+
+
+
 //					янпрхпнбйю якхъмхел
 
 void Sorting::Merge(int*& part1, int size1, int*& part2, int size2, int*& arr, int size)
